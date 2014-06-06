@@ -509,7 +509,9 @@ static int adev_open_output_stream(struct audio_hw_device *dev,
     out->stream.write = out_write;
     out->stream.get_render_position = out_get_render_position;
     out->stream.get_presentation_position = out_get_presentation_position;
+#ifndef OLD_TEGRA
     out->stream.get_next_write_timestamp = out_get_next_write_timestamp;
+#endif
 
     out->dev = adev;
 
