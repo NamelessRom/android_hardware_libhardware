@@ -134,7 +134,7 @@ enum {
     GRALLOC_USAGE_PRIVATE_3             = 0x80000000,
     GRALLOC_USAGE_PRIVATE_MASK          = 0xF0000000,
 
-#ifdef EXYNOS4_ENHANCEMENTS
+#if defined(EXYNOS4_ENHANCEMENTS) || defined(EXYNOS5_ENHANCEMENTS)
     /* SAMSUNG */
     GRALLOC_USAGE_PRIVATE_NONECACHE     = 0x00800000,
 
@@ -145,6 +145,8 @@ enum {
 
     /* SEC Private usage , for Overlay path at HWC */
     GRALLOC_USAGE_HWC_HWOVERLAY         = 0x20000000,
+
+    GRALLOC_USAGE_VIDEO_EXT             = 0x200000,
 #endif
 };
 
